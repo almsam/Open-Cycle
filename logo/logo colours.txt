@@ -1,0 +1,3 @@
+primary: #a30262 #8e0000
+secondary: #b55690 #d162a4 #d52d00 #ef7627
+background: #ffffff
