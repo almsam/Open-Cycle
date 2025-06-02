@@ -1,5 +1,15 @@
 # OpenCycle
 
+<div align="center">
+
+<a href="https://github.com/almsam/Open-Cycle">
+  <img src="OpenCycle logo.png" alt="Logo" width="270" height="270">
+</a>
+
+<h1 align="center">OpenCycle</h1>
+
+</div>
+
 **OpenCycle** is a privacy-first, open-source period tracking app. It helps users track menstruation, ovulation, and notes, perform basic cycle math, and display insights via graphs and reminders. All data is stored locally or securely in the cloud — *your cycle, your data*
 
 OpenCycle stores data *locally by default*. No analytics, no ads, no data harvesting. You control your data — optionally sync to your own MongoDB backend if desired.
