@@ -41,3 +41,6 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 ## OpenCycle is part of ***project OSPREY***
 
 > **OSPREY** — *Open Source Projects for Research, Education, & You* — is an open-source initiative that provides fresh graduates and early-career developers with real-world project experience.
+
+**OpenCycle** is developed under the OSPREY project as part of its mission to support open, inclusive, & cutting edge software. Contributors to OpenCycle are members of the OSPREY community & will be developing a viable product under the slow & steady model — while also learning modern web technologies through hands-on experience.
+
