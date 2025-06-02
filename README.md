@@ -3,7 +3,7 @@
 <div align="center">
 
 <a href="https://github.com/almsam/Open-Cycle">
-  <img src="OpenCycle logo.png" alt="Logo" width="270" height="270">
+  <img src="logo/period logo.png" alt="Logo" width="270" height="270">
 </a>
 
 <h1 align="center">OpenCycle</h1>
