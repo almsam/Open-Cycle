@@ -29,4 +29,7 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 | --------- | ------------------ | ----------------------------- |
 | Front end | UI Framework       | React & TypeScript            |
 | Front end | Cross-Platform App | Capacitor                     |
+| Back end  | App Logic          | React Hooks / Context API     |
+| Back end  | Local Storage      | localForage                   |
+| Back end  | Cloud DB           | MongoDB (via API)             |
 
