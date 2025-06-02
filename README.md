@@ -13,5 +13,8 @@
 - Local or cloud-based storage (localForage / MongoDB) - local as default
 - Deployable as a PWA — should work on iOS, Android, web, and desktop  
 
-
+#### Advanced requirements
+- Visual insights with simple charts (using Chart.js)  
+- Local reminders and notifications (via Capacitor)  
+- Basic ML models for prediction (probably Statsmodels or Sci-kit for Py)
 
