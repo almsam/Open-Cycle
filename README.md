@@ -35,3 +35,9 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 | Utility   | Charts & Graphs    | Chart.js                      |
 | Utility   | Notifications      | Capacitor Notification Plugin |
 | Utility   | Build Tool         | Vite*(or Next.js, TBD)*       |
+
+---
+
+## OpenCycle is part of ***project OSPREY***
+
+> **OSPREY** — *Open Source Projects for Research, Education, & You* — is an open-source initiative that provides fresh graduates and early-career developers with real-world project experience.
