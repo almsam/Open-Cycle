@@ -44,3 +44,7 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 
 **OpenCycle** is developed under the OSPREY project as part of its mission to support open, inclusive, & cutting edge software. Contributors to OpenCycle are members of the OSPREY community & will be developing a viable product under the slow & steady model — while also learning modern web technologies through hands-on experience.
 
+### Want to join OSPREY?
+- Fill out the [OSPREY Intake Form](https://forms.gle/7pdDQtkV4XDXB1TE9)
+- Then email: [osprey.project.adm@gmail.com](sprey.project.adm@gmail.com)
+- An OSPREY admin will reach out regarding next steps
