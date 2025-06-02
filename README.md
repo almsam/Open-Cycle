@@ -1,5 +1,3 @@
-# OpenCycle
-
 <div align="center">
 
 <a href="https://github.com/almsam/Open-Cycle">
