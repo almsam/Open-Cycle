@@ -15,7 +15,10 @@ furnished to do so, subject to the following conditions:
    shall be included in all copies or substantial portions of the Software:
 
    > "This software is part of the OSPREY Project (https://github.com/almsam/OSPREY),  
-   > created by contributors including ["Alex, Bao, Estella, Minami, & Samira" or "Alexofthefoot, Almsam, Minami660, Notbaopham, & Techisanerd" or "https://github.com/alexofthefoot, https://github.com/almsam, https://github.com/Minami660, https://github.com/Notbaopham, & https://github.com/Techisanerd"].  
+   > created by contributors including
+	["Alex, Bao, Estella, Minami, & Samira"
+	  or "Alexofthefoot, Almsam, Minami660, Notbaopham, & Techisanerd"
+	  or "https://github.com/alexofthefoot, https://github.com/almsam, https://github.com/Minami660, https://github.com/Notbaopham, & https://github.com/Techisanerd"].  
    > For more information, visit:
    >> https://github.com/almsam/OSPREY & 
    >> https://github.com/almsam/OSPREY/Social Code of Conduct.md "
