@@ -46,6 +46,24 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 
 ---
 
+## Instructions on how to get started.
+
+# Things to check off
+
+1. Node.js ``16.x`` - https://nodejs.org/en/blog/release/v16.16.0
+2. Visual Studio Code or other text editor
+
+# Instructions on how to get started
+
+1. Navigate to the folder of menstrual-cycle-tracker in your terminal
+2. Clone the ``main`` in your folder
+3. (Optional, might be time saving) use ``npm -v`` and ``node -v`` to respectively check your npm integrity / version and Node.js
+4. ``npm install`` (this might be the most buggy part - use ChatGPT or CoPilot to bug fix your installation), npm will go through the folder and see all of the required modules, then install them
+5. (Optional, bug fixing - do this if you know what you are doing) ``npm audit fix --force``
+6. ``npm start`` - the website will start in localhost:3000
+
+---
+
 ## OpenCycle is part of ***project OSPREY***
 
 > **OSPREY** — *Open Source Projects for Research, Education, & You* — is an open-source initiative that provides fresh graduates and early-career developers with real-world project experience.
