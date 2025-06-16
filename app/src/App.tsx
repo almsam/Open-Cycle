@@ -14,12 +14,14 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <div style={{ display: 'flex' }}>
         <Navbar />
         <div style={{ marginLeft: '200px', padding: '20px' }}>
           <OrientationSwitcher setOrientation={setOrientation} />
           <Routes>
-            <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/history" element={<History />} />
             <Route path="/profile" element={<Profile />} />
