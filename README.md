@@ -50,18 +50,15 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 
 #### Things to check off
 
-1. Node.js ``16.x`` - https://nodejs.org/en/blog/release/v16.16.0
-2. Visual Studio Code or other text editor
+1. Node.js - https://nodejs.org/en
+2. A text editor (VSCode, VIM, Atom, Notepad++, etc)
 
 #### Instructions on how to get started
 
-1. Navigate to the folder ``app`` in your terminal
-2. Clone the ``main`` in your folder
-3. (Optional, might be time saving) use ``npm -v`` and ``node -v`` to respectively check your npm integrity / version and Node.js
-4. ``npm install`` (this might be the most buggy part - use ChatGPT or CoPilot to bug fix your installation), npm will go through the folder and see all of the required modules, then install them
-5. (Optional, bug fixing - do this if you know what you are doing) ``npm audit fix --force``
-6. ``npm start`` - the website will start in localhost:3000
-7. Or alternately, double click on ``index.html``, this will initiate a localhost:3000 tab alongside with the html from the local server (which does nothing)
+1. Navigate to ``app`` in the directory
+2. (Optional for first time opening up the project) ``npm install``
+3. ``npm run dev``
+4. ``http://localhost:5173/`` in the browser
 
 ---
 
@@ -71,7 +68,7 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 
 **OpenCycle** is developed under the OSPREY project as part of its mission to support open, inclusive, & cutting edge software. Contributors to OpenCycle are members of the OSPREY community & will be developing a viable product under the slow & steady model — while also learning modern web technologies through hands-on experience.
 
-For more info see the [OSPREY project repo](https://github.com/almsam/OSPREY)
+For more info, see the [OSPREY project repo](https://github.com/almsam/OSPREY)
 
 ## Code of Conduct
 
