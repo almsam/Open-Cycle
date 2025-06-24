@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const CycleSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+      },
     //User provided information
     menstruationStart: Date,
     menstruationEnd: Date,
@@ -9,7 +14,7 @@ const CycleSchema = new mongoose.Schema({
     //App provided information
     fertileWindowStart: Date,
     fertileWindowEnd: Date,
-    averageCycleLength: Number //Average in days, across last 6 months 
+    averageCycleLength: Number //Average in days, across last 6 months
 });
 
 module.exports = mongoose.model('Cycle', CycleSchema);
