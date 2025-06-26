@@ -1,5 +1,9 @@
-function Home() {
-    return <h1>This is home page</h1>;
-}
+import { MenstruationCalendar } from "@/features/MenstrumentCalendar" 
 
-export default Home;
+export default function Home() {
+  return (
+    <div>
+      <MenstruationCalendar />
+    </div>
+  )
+}
