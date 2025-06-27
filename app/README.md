@@ -24,11 +24,11 @@ export default tseslint.config({
   languageOptions: {
     // other options...
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
@@ -51,4 +51,19 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
+
+
+## routing, run:
+npm install react-router-dom
+npm install -D @types/react-router-dom
+
+## styling
+To install Tailwind, run:
+npm install tailwindcss @tailwindcss/vite
+npm install -D @types/node
+Reference: https://tailwindcss.com/docs/installation/using-vite
+
+for shadcn, The initial setup was done using:
+npx shadcn@latest init
+Which color would you like to use as base color? › Neutral
 ```
