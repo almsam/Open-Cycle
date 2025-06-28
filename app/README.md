@@ -51,19 +51,37 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
-
-
-## routing, run:
-npm install react-router-dom
-npm install -D @types/react-router-dom
-
-## styling
-To install Tailwind, run:
-npm install tailwindcss @tailwindcss/vite
-npm install -D @types/node
-Reference: https://tailwindcss.com/docs/installation/using-vite
-
-for shadcn, The initial setup was done using:
-npx shadcn@latest init
-Which color would you like to use as base color? › Neutral
 ```
+
+## Getting Started
+
+**📌 After pulling the latest changes or switching to a newly merged branch, run `npm install` to install any updated dependencies.**
+
+```bash
+cd app
+npm install
+```
+
+This ensures your local environment stays in sync with the project.
+
+## Tech Stack
+
+This project is built using the following tools and libraries:
+
+## Frontend
+
+- **[React](https://react.dev/)**  
+  A modern JavaScript library for building interactive user interfaces using components and state management.
+
+- **[React Router](https://reactrouter.com/)**  
+  A declarative routing library for React that enables dynamic and nested navigation between views in your app.
+
+- **[Vite](https://vite.dev/)**  
+  A fast and modern build tool that provides instant server start and lightning-fast HMR (Hot Module Replacement).
+
+- **[Tailwind CSS](https://tailwindcss.com/)**  
+  A utility-first CSS framework that makes it easy to build responsive and custom UIs directly in your markup.
+
+- **[shadcn/ui](https://ui.shadcn.com/)**  
+  A beautifully designed collection of accessible UI components, built with Tailwind CSS and fully customizable for your app's needs.
+
