@@ -1,12 +1,3 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
@@ -17,8 +8,6 @@ export default tseslint.config({
     // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
     // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
@@ -68,7 +57,7 @@ This ensures your local environment stays in sync with the project.
 
 This project is built using the following tools and libraries:
 
-## Frontend
+### Frontend
 
 - **[React](https://react.dev/)**  
   A modern JavaScript library for building interactive user interfaces using components and state management.
@@ -85,3 +74,17 @@ This project is built using the following tools and libraries:
 - **[shadcn/ui](https://ui.shadcn.com/)**  
   A beautifully designed collection of accessible UI components, built with Tailwind CSS and fully customizable for your app's needs.
 
+### Backend
+
+- **[LocalForage](https://github.com/localForage/localForage)**
+  A simple wrapper for local storage APIs.
+
+- **[MongoDB](https://www.mongodb.com/)**
+  A popular document-oriented database software. Used to back up storage data outside of device.
+
+### Utils
+
+- **[Capacitor](https://capacitorjs.com/)
+  A versatile library to allow cross-platform app creation. Will also be used for notification functionality.
+- **[Chart.js](https://www.chartjs.org/)
+  A simple yet powerful HTML chart library. 

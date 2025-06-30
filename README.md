@@ -33,32 +33,26 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 
 ## Tech Stack
 
-| Component | Purpose            | Tech                          |
-| --------- | ------------------ | ----------------------------- |
-| Front end | UI Framework       | React & TypeScript            |
-| Front end | Cross-Platform App | Capacitor                     |
-| Back end  | App Logic          | React Hooks / Context API     |
-| Back end  | Local Storage      | localForage                   |
-| Back end  | Cloud DB           | MongoDB (via API)             |
-| Utility   | Charts & Graphs    | Chart.js                      |
-| Utility   | Notifications      | Capacitor Notification Plugin |
-| Utility   | Build Tool         | Vite                          |
+| Component | Purpose            | Tech                                   |
+| --------- | ------------------ | ------------------------------------   |
+| Front end | UI Framework       | React & TypeScript, Tailwind, shadcn/ui|
+| Front end | Cross-Platform App | Capacitor                              |
+| Back end  | App Logic          | React Hooks / Context API              |
+| Back end  | Local Storage      | localForage                            |
+| Back end  | Cloud DB           | MongoDB (via API)                      |
+| Utility   | Charts & Graphs    | Chart.js                               |
+| Utility   | Notifications      | Capacitor Notification Plugin          |  
+| Utility   | Build Tool         | Vite                                   |  
 
 ---
 
 ## Instructions on how to get started.
 
-#### Things to check off
-
-1. Node.js - https://nodejs.org/en
-2. A text editor (VSCode, VIM, Atom, Notepad++, etc)
-
-#### Instructions on how to get started
-
+0. Ensure that you have [Node.js](https://nodejs.org/en/download/current) installed on your machine.
 1. Navigate to ``app`` in the directory
 2. (Optional for first time opening up the project) ``npm install``
 3. ``npm run dev``
-4. ``http://localhost:5173/`` in the browser
+4. ``http://localhost:5173/home`` in the browser
 
 ---
 
