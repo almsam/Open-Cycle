@@ -36,34 +36,76 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     }
   });
 
-  app.get('/test-entry', async (req, res) => {
-    try {
-      let user = await User.findOne({ email: 'someEmail' });
-      if (!user) {
-        user = new User({
-          userID: 1,
-          username: 'blankUser',
-          email: 'someEmail',
-          password: 'secure'
-        });
-        await user.save();
-      }
+  app.post('/test-set-fertile-window/:id', async (req, res) => {
+  try {
+    const cycle = await Cycle.findById(req.params.id);
+    if (!cycle) return res.status(404).send('Cycle not found');
 
-      const testEntry = new Cycle({
-        menstruationStart: new Date('2025-06-01'),
-        menstruationEnd: new Date('2025-06-05'),
-        ovulationDate: new Date('2025-06-10'),
-        userNote: 'Feeling good!',
-        user: user._id
+    const { start, end } = req.body;
+    cycle.setFertileWindow(start, end);
+    await cycle.save();
+
+    res.json({ message: 'Fertile window updated', cycle });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/test-set-user-note/:id', async (req, res) => {
+  try {
+    const cycle = await Cycle.findById(req.params.id);
+    if (!cycle) return res.status(404).send('Cycle not found');
+
+    await cycle.setUserNote(req.body.note);  // assuming req.body.note has the new note
+    await cycle.save();
+
+    res.json({ message: 'User note updated', cycle });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+app.get('/test-get-summary/:id', async (req, res) => {
+  try {
+    const cycle = await Cycle.findById(req.params.id);
+    if (!cycle) return res.status(404).send('Cycle not found');
+
+    const summary = cycle.getCycleSummary();
+    res.json(summary);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/test-cycle-entry', async (req, res) => {
+  try {
+    let user = await User.findOne({ email: 'someEmail' });
+    if (!user) {
+      user = new User({
+        userID: 1,
+        username: 'blankUser',
+        email: 'someEmail',
+        password: 'secure'
       });
-
-      const saved = await testEntry.save();
-      res.json(saved);
-    } catch (err) {
-      console.error("Error saving test entry:", err);
-      res.status(500).json({ error: err.message });
+      await user.save();
     }
-  });
+
+    const testEntry = new Cycle({
+      menstruationStart: new Date('2025-06-01'),
+      menstruationEnd: new Date('2025-06-05'),
+      ovulationDate: new Date('2025-06-10'),
+      userNote: 'Feeling good!',
+      user: user._id
+    });
+
+    const saved = await testEntry.save();
+    res.json(saved);
+  } catch (err) {
+    console.error("Error saving test entry:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
   app.get('/test-user-entry', async (req, res) => {
     try {
@@ -81,6 +123,18 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
       res.status(500).json({ error: err.message });
     }
   });
+
+  app.get('/cycle-summary', async (req, res) => {
+  const cycle = await Cycle.findOne().sort({ _id: -1 }); // Most recent
+  if (!cycle) return res.status(404).json({ error: "No cycle found" });
+
+  try {
+    const summary = cycle.getCycleSummary();
+    res.json(summary);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
   app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
