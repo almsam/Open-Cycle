@@ -29,36 +29,51 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 - Local reminders and notifications (via Capacitor)
 - Basic ML models for prediction (probably Statsmodels or Sci-kit for Py)
 
----
-
-## Tech Stack
-
-| Component | Purpose            | Tech                          |
-| --------- | ------------------ | ----------------------------- |
-| Front end | UI Framework       | React & TypeScript            |
-| Front end | Cross-Platform App | Capacitor                     |
-| Back end  | App Logic          | React Hooks / Context API     |
-| Back end  | Local Storage      | localForage                   |
-| Back end  | Cloud DB           | MongoDB (via API)             |
-| Utility   | Charts & Graphs    | Chart.js                      |
-| Utility   | Notifications      | Capacitor Notification Plugin |
-| Utility   | Build Tool         | Vite                          |
-
----
 
 ## Instructions on how to get started.
 
-#### Things to check off
-
-1. Node.js - https://nodejs.org/en
-2. A text editor (VSCode, VIM, Atom, Notepad++, etc)
-
-#### Instructions on how to get started
-
+0. Ensure that you have [Node.js](https://nodejs.org/en/download/current) installed on your machine.
 1. Navigate to ``app`` in the directory
 2. (Optional for first time opening up the project) ``npm install``
 3. ``npm run dev``
-4. ``http://localhost:5173/`` in the browser
+4. ``http://localhost:5173/home`` in the browser
+
+## Tech Stack
+
+This project is built using the following tools and libraries:
+
+### Frontend
+
+- **[React](https://react.dev/)**  
+  A modern JavaScript library for building interactive user interfaces using components and state management.
+
+- **[React Router](https://reactrouter.com/)**  
+  A declarative routing library for React that enables dynamic and nested navigation between views in your app.
+
+- **[Vite](https://vite.dev/)**  
+  A fast and modern build tool that provides instant server start and lightning-fast HMR (Hot Module Replacement).
+
+- **[Tailwind CSS](https://tailwindcss.com/)**  
+  A utility-first CSS framework that makes it easy to build responsive and custom UIs directly in your markup.
+
+- **[shadcn/ui](https://ui.shadcn.com/)**  
+  A beautifully designed collection of accessible UI components, built with Tailwind CSS and fully customizable for your app's needs.
+
+### Backend
+
+- **[LocalForage](https://github.com/localForage/localForage)**
+  A simple wrapper for local storage APIs.
+
+- **[MongoDB](https://www.mongodb.com/)**
+  A popular document-oriented database software. Used to back up storage data outside of device.
+
+### Utils
+
+- **[Capacitor](https://capacitorjs.com/)**
+  A versatile library to allow cross-platform app creation. Will also be used for notification functionality.
+  
+- **[Chart.js](https://www.chartjs.org/)**
+  A simple yet powerful charting library to display user data.
 
 ---
 
