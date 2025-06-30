@@ -23,3 +23,8 @@ While OpenCycle can temporarily store data locally in the (via `localForage`), t
 - Visual insights, reminders, and analytics
 
 This backend runs on Node.js and MongoDB, and powers the data layer of the application.
+
+# Current Status
+- go to /server
+- node server.js
+- 
