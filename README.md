@@ -29,7 +29,6 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 - Local reminders and notifications (via Capacitor)
 - Basic ML models for prediction (probably Statsmodels or Sci-kit for Py)
 
----
 
 ## Instructions on how to get started.
 
@@ -38,7 +37,6 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 2. (Optional for first time opening up the project) ``npm install``
 3. ``npm run dev``
 4. ``http://localhost:5173/home`` in the browser
----
 
 ## Tech Stack
 
@@ -71,9 +69,11 @@ This project is built using the following tools and libraries:
 
 ### Utils
 
-- **[Capacitor](https://capacitorjs.com/)
+- **[Capacitor](https://capacitorjs.com/)**
   A versatile library to allow cross-platform app creation. Will also be used for notification functionality.
-- **[Chart.js](https://www.chartjs.org/)
+  
+- **[Chart.js](https://www.chartjs.org/)**
+  A simple yet powerful charting library to display user data.
 
 ---
 
