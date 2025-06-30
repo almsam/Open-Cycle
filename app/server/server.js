@@ -1,12 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
 const app = express();
 const PORT = 3001;
 
-// Middleware to parse JSON
+// Middleware
 app.use(express.json());
 
-// Connect to MongoDB locally
+// Models
+const Cycle = require('./models/CycleInfo');
+const User = require('./models/User');
+
+// Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -18,15 +23,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     console.error('Mongoose connection error:', err);
   });
 
-  // Load the Cycle and User models
-  const Cycle = require('./models/CycleInfo');
-  const User = require('./models/User');
+  // Routes
 
-  // Simple test route
+  // Basic test route
   app.get('/', (req, res) => {
     res.send('Backend is working!');
   });
-  console.log("here");
+
   // POST route to create a new cycle
   app.post('/cycle', async (req, res) => {
     try {
@@ -38,14 +41,27 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     }
   });
 
-  // Test route to insert a hardcoded entry (cycle)
+  // Test route to insert a hardcoded cycle with user reference
   app.get('/test-entry', async (req, res) => {
     try {
+      // Find or create user within this async route
+      let user = await User.findOne({ email: 'someEmail' });
+      if (!user) {
+        user = new User({
+          userID: 1,
+          username: 'blankUser',
+          email: 'someEmail',
+          password: 'secure'
+        });
+        await user.save();
+      }
+
       const testEntry = new Cycle({
         menstruationStart: new Date('2025-06-01'),
         menstruationEnd: new Date('2025-06-05'),
         ovulationDate: new Date('2025-06-10'),
         userNote: 'Feeling good!',
+        user: user._id
       });
 
       const saved = await testEntry.save();
@@ -56,24 +72,25 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     }
   });
 
-  // Test route to insert a hardcoded entry (user)
+  // Test route to insert a hardcoded user
   app.get('/test-user-entry', async (req, res) => {
     try {
       const testUserEntry = new User({
-        username: new String('Alex'),
-        email: new String('alex@gmail.com'),
-        password: new String('supersecure')
+        userID: '1',
+        username: 'Alex',
+        email: 'alex@gmail.com',
+        password: 'supersecure'
       });
 
       const saved = await testUserEntry.save();
       res.json(saved);
     } catch (err) {
-      console.error("Error saving test entry:", err);
+      console.error("Error saving test user entry:", err);
       res.status(500).json({ error: err.message });
     }
   });
 
-  // Start the server only after MongoDB is connected
+  // Start server
   app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
   });
