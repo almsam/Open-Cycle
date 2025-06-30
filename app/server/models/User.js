@@ -8,3 +8,25 @@ const UserSchema = new mongoose.Schema({
 });
 
 export default mongoose.model('User', UserSchema);
+
+// Methods
+
+UserSchema.methods.getUsername = function () {
+  return this.username;
+};
+
+UserSchema.methods.getEmail = function () {
+  return this.email;
+};
+
+UserSchema.methods.setUsername = function (newUsername) {
+  this.username = newUsername;
+};
+
+UserSchema.methods.setEmail = function (newEmail) {
+  this.email = newEmail;
+};
+
+UserSchema.methods.setPassword = async function (newPassword) {
+  this.password = newPassword;
+};
