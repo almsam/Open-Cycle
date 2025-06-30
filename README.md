@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/almsam/Open-Cycle">
-  <img src="logo/period logo.png" alt="Logo" width="270" height="270">
+  <img src="logo/logo.png" alt="Logo" width="270" height="270">
 </a>
 
 <h1 align="center">OpenCycle</h1>
@@ -29,7 +29,6 @@ OpenCycle stores data *locally by default*. No analytics, no ads, no data harves
 - Local reminders and notifications (via Capacitor)
 - Basic ML models for prediction (probably Statsmodels or Sci-kit for Py)
 
-
 ## Instructions on how to get started.
 
 0. Ensure that you have [Node.js](https://nodejs.org/en/download/current) installed on your machine.
@@ -44,26 +43,17 @@ This project is built using the following tools and libraries:
 
 ### Frontend
 
-- **[React](https://react.dev/)**  
-  A modern JavaScript library for building interactive user interfaces using components and state management.
-
-- **[React Router](https://reactrouter.com/)**  
-  A declarative routing library for React that enables dynamic and nested navigation between views in your app.
-
-- **[Vite](https://vite.dev/)**  
-  A fast and modern build tool that provides instant server start and lightning-fast HMR (Hot Module Replacement).
-
-- **[Tailwind CSS](https://tailwindcss.com/)**  
-  A utility-first CSS framework that makes it easy to build responsive and custom UIs directly in your markup.
-
-- **[shadcn/ui](https://ui.shadcn.com/)**  
+- **[React](https://react.dev/)**A modern JavaScript library for building interactive user interfaces using components and state management.
+- **[React Router](https://reactrouter.com/)**A declarative routing library for React that enables dynamic and nested navigation between views in your app.
+- **[Vite](https://vite.dev/)**A fast and modern build tool that provides instant server start and lightning-fast HMR (Hot Module Replacement).
+- **[Tailwind CSS](https://tailwindcss.com/)**A utility-first CSS framework that makes it easy to build responsive and custom UIs directly in your markup.
+- **[shadcn/ui](https://ui.shadcn.com/)**
   A beautifully designed collection of accessible UI components, built with Tailwind CSS and fully customizable for your app's needs.
 
 ### Backend
 
 - **[LocalForage](https://github.com/localForage/localForage)**
   A simple wrapper for local storage APIs.
-
 - **[MongoDB](https://www.mongodb.com/)**
   A popular document-oriented database software. Used to back up storage data outside of device.
 
@@ -71,7 +61,6 @@ This project is built using the following tools and libraries:
 
 - **[Capacitor](https://capacitorjs.com/)**
   A versatile library to allow cross-platform app creation. Will also be used for notification functionality.
-  
 - **[Chart.js](https://www.chartjs.org/)**
   A simple yet powerful charting library to display user data.
 
@@ -90,6 +79,7 @@ For more info, see the [OSPREY project repo](https://github.com/almsam/OSPREY)
 We follow the [OSPREY Code of Conduct](https://github.com/almsam/OSPREY/tree/main?tab=coc-ov-file) to ensure a respectful, inclusive, and supportive environment for all contributors. By participating in this project, you agree to uphold these standards
 
 ### Want to join OSPREY?
+
 - Fill out the [OSPREY Intake Form](https://forms.gle/7pdDQtkV4XDXB1TE9)
 - Then email: [osprey.project.adm@gmail.com](sprey.project.adm@gmail.com)
 - An OSPREY admin will reach out regarding next steps
