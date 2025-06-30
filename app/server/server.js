@@ -1,15 +1,13 @@
-const express = require('express');
-const mongoose = require('mongoose');
+import express from 'express';
+import mongoose from 'mongoose';
+import Cycle from './models/CycleInfo.js';
+import User from './models/User.js';
 
 const app = express();
 const PORT = 3001;
 
 // Middleware
 app.use(express.json());
-
-// Models
-const Cycle = require('./models/CycleInfo');
-const User = require('./models/User');
 
 // Connect to MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
@@ -24,13 +22,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
   });
 
   // Routes
-
-  // Basic test route
   app.get('/', (req, res) => {
     res.send('Backend is working!');
   });
 
-  // POST route to create a new cycle
   app.post('/cycle', async (req, res) => {
     try {
       const newCycle = new Cycle(req.body);
@@ -41,10 +36,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     }
   });
 
-  // Test route to insert a hardcoded cycle with user reference
   app.get('/test-entry', async (req, res) => {
     try {
-      // Find or create user within this async route
       let user = await User.findOne({ email: 'someEmail' });
       if (!user) {
         user = new User({
@@ -72,7 +65,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     }
   });
 
-  // Test route to insert a hardcoded user
   app.get('/test-user-entry', async (req, res) => {
     try {
       const testUserEntry = new User({
@@ -90,11 +82,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/cycleTracker', {
     }
   });
 
-  // Start server
   app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
   });
-
 })
 .catch(err => {
   console.error('MongoDB connection error:', err);
