@@ -17,39 +17,11 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 
-// export default function Settings(){
-//     return (
-//         <div className="w-full">
-//             <h1>Settings</h1>
-//                 <div className="place-items-center">
-//                     <div className="w-64 md:w-96 lg:w-128">
-//                         <Label className="mb-2" htmlFor="message">Your Name</Label>
-//                         <Input className="mb-8" type="text" id="name" placeholder="Name" />
-//                     </div>
-//                     <div className="w-64 md:w-96 lg:w-128">
-//                         <Label className="mb-2" htmlFor="message">Your Email Address</Label>
-//                         <Input className="mb-8" type="text" id="email" placeholder="Email" />
-//                     </div>
-//                     <div className="w-64 md:w-96 lg:w-128">
-//                         <Label className="mb-2" htmlFor="message">Your Password</Label>
-//                         <Input className="mb-8" type="text" id="password" placeholder="Password" />
-//                     </div>
-//                     <div className="w-64 md:w-96 lg:w-128">
-//                         <Label className="mb-2" htmlFor="message">Password Confirmation</Label>
-//                         <Input className="mb-8" type="text" id="password_confirmation" placeholder="Password Confirmation" />
-//                     </div>
-//                     <Button>Submit</Button>
-//                     <Button>Cancel</Button>
-//                 </div>
-//         </div>
-//     )
-// }
-
 const FormSchema = z.object({
     name: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
-    email: z.string().email("You have to enter a valid email address.ghghjv").min(2, {
+    email: z.string().email("You have to enter a valid email address.").min(2, {
     message: "You have to enter a valid email address.",
   }),
     password: z.string().min(2, {
@@ -78,9 +50,6 @@ export default function Settings() {
     toast("Your information has been updated.")
   }
 
-
-
- // export default function Settings(){
     return (
         <div className="w-full">
             <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Settings</h1>
@@ -151,28 +120,6 @@ export default function Settings() {
                     </div>
                 </form>
             </Form>
-
-
-                {/* <div className="place-items-center">
-                    <div className="w-64 md:w-96 lg:w-128">
-                        <Label className="mb-2" htmlFor="message">Your Name</Label>
-                        <Input className="mb-8" type="text" id="name" placeholder="Name" />
-                    </div>
-                    <div className="w-64 md:w-96 lg:w-128">
-                        <Label className="mb-2" htmlFor="message">Your Email Address</Label>
-                        <Input className="mb-8" type="text" id="email" placeholder="Email" />
-                    </div>
-                    <div className="w-64 md:w-96 lg:w-128">
-                        <Label className="mb-2" htmlFor="message">Your Password</Label>
-                        <Input className="mb-8" type="text" id="password" placeholder="Password" />
-                    </div>
-                    <div className="w-64 md:w-96 lg:w-128">
-                        <Label className="mb-2" htmlFor="message">Password Confirmation</Label>
-                        <Input className="mb-8" type="text" id="password_confirmation" placeholder="Password Confirmation" />
-                    </div>
-                    <Button>Submit</Button>
-                    <Button>Cancel</Button>
-                </div> */}
         </div>
         
 
