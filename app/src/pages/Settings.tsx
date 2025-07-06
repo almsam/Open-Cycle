@@ -75,13 +75,7 @@ export default function Settings() {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log('hit')
-    toast("You submitted the following values", {
-      description: (
-        <pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    })
+    toast("Your information has been updated.")
   }
 
 
@@ -89,7 +83,7 @@ export default function Settings() {
  // export default function Settings(){
     return (
         <div className="w-full">
-            <h1>Settings</h1>
+            <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Settings</h1>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="place-items-center">
@@ -99,7 +93,7 @@ export default function Settings() {
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="mb-2">Your name</FormLabel>
+                                    <FormLabel>Your name</FormLabel>
                                     <FormControl>
                                         <Input className="mb-6" placeholder="Your name" {...field} />
                                     </FormControl>
@@ -114,7 +108,7 @@ export default function Settings() {
                         name="email"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel className="mb-2">Your email address</FormLabel>
+                                <FormLabel>Your email address</FormLabel>
                                 <FormControl>
                                     <Input className="mb-6" placeholder="Your email address" {...field} />
                                 </FormControl>
@@ -129,9 +123,9 @@ export default function Settings() {
                         name="password"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel className="mb-2">Your password</FormLabel>
+                                <FormLabel>Your password</FormLabel>
                                 <FormControl>
-                                    <Input className="mb-6" placeholder="Your password" {...field} />
+                                    <Input type="password" className="mb-6" placeholder="Your password" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -144,9 +138,9 @@ export default function Settings() {
                         name="password_confirmation"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel className="mb-2">Password Confirmation</FormLabel>
+                                <FormLabel>Password Confirmation</FormLabel>
                                 <FormControl>
-                                    <Input className="mb-6" placeholder="Password Confirmation" {...field} />
+                                    <Input type="password" className="mb-6" placeholder="Password Confirmation" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
