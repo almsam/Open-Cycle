@@ -99,6 +99,11 @@ CycleSchema.methods.setUserNote = async function (note) {
   this.userNote = note;
 };
 
+CycleSchema.methods.getUserNote = function () {
+  return this.userNote;
+}
+
+
 // Set a new fertile window
 CycleSchema.methods.setFertileWindow = function(start, end) {
   if (start >= end) throw new Error("Fertile window start must be before end");

@@ -7,10 +7,8 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true } 
 });
 
-export default mongoose.model('User', UserSchema);
 
 // Methods
-
 UserSchema.methods.getUsername = function () {
   return this.username;
 };
@@ -30,3 +28,5 @@ UserSchema.methods.setEmail = function (newEmail) {
 UserSchema.methods.setPassword = async function (newPassword) {
   this.password = newPassword;
 };
+
+export default mongoose.model('User', UserSchema);
