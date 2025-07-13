@@ -3,7 +3,7 @@ import './App.css'
 import { Routes, Route, BrowserRouter, Outlet } from 'react-router-dom'
 import Home from './pages/Home'
 import Settings from './pages/Settings'
-import LoginPage from './pages/Login'
+import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Sidebar from "@/components/ui/sidebar"
 
@@ -26,7 +26,7 @@ function App() {
             <Route path="home" element={<Home />}/>
             <Route path="settings" element={<Settings />}/>
           </Route>
-          <Route path="/login" element={<LoginPage />}/>
+          <Route path="/login" element={<Login />}/>
           <Route path="/signup" element={<Signup />}/>
         </Routes>
       <Toaster />
