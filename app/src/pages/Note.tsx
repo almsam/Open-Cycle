@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import "../App.css"
 
 //from the zod docs
 const zodDateFromString = () =>
@@ -45,13 +46,13 @@ export default function Note(){
         toast("Successfully logged!")
         //TODO: implement calling backend here
     }
-
+    
 
     return (
     <div className="w-full">
         <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">New Note</h1>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" >
                     <div className="place-items-center">
                         <div className="w-64 md:w-96 lg:w-128">
                             <FormField

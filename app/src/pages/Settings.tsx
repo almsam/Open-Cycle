@@ -16,6 +16,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import "../App.css"
 
 const FormSchema = z.object({
     name: z.string().min(2, {
