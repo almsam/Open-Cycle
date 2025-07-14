@@ -23,8 +23,8 @@ const zodDateFromString = () =>
   }, z.date());
 
 const formSchema = z.object({
+    menstruationStarts: zodDateFromString(),
     menstruationEnds: zodDateFromString(),
-    ovulationStarts: zodDateFromString(),
     ovulationDate: zodDateFromString(),
     userNote: z.string()
 });
@@ -34,8 +34,8 @@ export default function Note(){
     const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-        menstruationEnds: new Date(), 
-        ovulationStarts: new Date(),
+        menstruationStarts: new Date(), 
+        menstruationEnds: new Date(),
         ovulationDate: new Date(),
         userNote: ""
         }
@@ -56,6 +56,19 @@ export default function Note(){
                     <div className="place-items-center">
                         <div className="w-64 md:w-96 lg:w-128">
                             <FormField
+                            name="menstruationStarts"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Menstruation start date</FormLabel>
+                                    <FormControl>
+                                        <Input type="date" className="mb-6" placeholder="Enter Date... (YYYY-MM-DD)" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                             />
+                        <div className="w-64 md:w-96 lg:w-128">
+                            <FormField
                             name="menstruationEnds"
                             render={({ field }) => (
                                 <FormItem>
@@ -66,28 +79,15 @@ export default function Note(){
                                     <FormMessage />
                                 </FormItem>
                                 )}
-                            />
+                             />
                         </div>
-                        <div className="w-64 md:w-96 lg:w-128">
-                        <FormField
-                        name="ovulationStarts"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel>Ovulation start date</FormLabel>
-                                <FormControl>
-                                    <Input type="date" className="mb-6" placeholder="Enter Date... (YYYY-MM-DD)" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                            )}
-                        />
                         </div>
                         <div className="w-64 md:w-96 lg:w-128">
                         <FormField
                         name="ovulationDate"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Ovulation end date</FormLabel>
+                                <FormLabel>Ovulation date</FormLabel>
                                 <FormControl>
                                     <Input type="date" className="mb-6" placeholder="Enter Date... (YYYY-MM-DD)" {...field} />
                                 </FormControl>
