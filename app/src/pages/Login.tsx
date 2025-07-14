@@ -12,18 +12,18 @@ import {
 import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-
-
-const FormSchema = z.object({
-  email: z.string().email("You have to enter a valid email address.").min(2,{
-    message: "You have to enter a valid email address."
-  }),
-  password: z.string().min(2, {
-    message: "Password must be at least 2 characters.",
-  }),
-})
+import { useNavigate } from "react-router-dom"
 
 export default function Login() {
+  const navigate = useNavigate();
+  const FormSchema = z.object({
+    email: z.string().email("You have to enter a valid email address.").min(2,{
+      message: "You have to enter a valid email address."
+    }),
+    password: z.string().min(2, {
+      message: "Password must be at least 2 characters.",
+    }),
+  })
 
   const form = useForm<z.infer<typeof FormSchema>>({
       resolver: zodResolver(FormSchema),
@@ -33,8 +33,25 @@ export default function Login() {
       },
     })
 
-  function onSubmit() {
-    console.log('hit')
+  const onSubmit = async () => {
+    // Handle if the user has been logged in here.
+    // event.preventDefault();
+    console.log('hit');
+
+    try {
+      let isLoggedin = true;
+
+      if (isLoggedin ){
+        console.log('should be home');
+        navigate("/home")
+        // return<Route path="home" element={<Home />}/>
+      }
+    } catch (err: any) {
+      console.log(err.message)
+    }
+    
+    
+    
   }
 
     return ( 
