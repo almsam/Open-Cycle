@@ -9,7 +9,7 @@ export default function Sidebar() {
 
   return (
     <div className="w-[200px] h-screen border-r bg-white p-4 space-y-4">
-      <h2 className="text-xl font-bold text-[#a30262]">My App</h2>
+      <h2 className="text-xl font-bold text-[#a30262]">Open Cycle</h2>
 
       <nav className="flex flex-col space-y-2">
         <Button variant="ghost" className="justify-start" onClick={() => navigate('home')}>
