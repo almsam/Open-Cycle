@@ -22,7 +22,6 @@ function AppLayout() {
 function App() {
   return (
     <div className="flex">
-      <Sidebar/>
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route path="home" element={<Home />}/>
