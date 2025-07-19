@@ -35,6 +35,7 @@ export function MenstruationCalendar() {
             [&_[data-selected-single='true']]:bg-[#a30262]
             [&_[data-selected-single='true']]:text-white
             [&_button]:h-12 [&_button]:w-12 [&_button]:text-xl"
+        captionLayout="dropdown"
         />
     </Card>
     
