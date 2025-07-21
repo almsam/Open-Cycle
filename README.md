@@ -56,7 +56,8 @@ This project is built using the following tools and libraries:
   A simple wrapper for local storage APIs.
 - **[MongoDB](https://www.mongodb.com/)**
   A popular document-oriented database software. Used to back up storage data outside of device.
-
+- **[Express](https://expressjs.com/)**
+  A fast and simple framework used for server middleware.
 ### Utils
 
 - **[Capacitor](https://capacitorjs.com/)**
