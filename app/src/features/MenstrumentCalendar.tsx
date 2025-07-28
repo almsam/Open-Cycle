@@ -4,6 +4,7 @@ import { Calendar } from "@/components/ui/calendar"
 import { Card } from "@/components/ui/card"
 import { eachDayOfInterval, addDays, isSameDay } from "date-fns"
 import { useState } from "react"
+import type { url } from "inspector"
 
 
 
@@ -38,9 +39,17 @@ export function MenstruationCalendar() {
               [&_button]:h-12 [&_button]:w-12 [&_button]:text-xl"
           />
       </Card>
-      <text>{
-          date ? `Selected: ${date.toLocaleDateString()}` : "Select a day to see details."
-        }</text>
+      <span>{
+          date ? ` ${date.toLocaleDateString()}` : "Select a day to see details."
+        }
+          <br />
+          previous period end 
+          <br />
+          next period start
+           <br />
+      </span>
+      <span>Make a note </span>
+      <a href="url">here.</a>
     </div>
     
   )
