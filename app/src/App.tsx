@@ -7,6 +7,7 @@ import Note from './pages/Note'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Sidebar from "@/components/ui/sidebar"
+import { ThemeProvider } from "@/components/ui/theme-provider"
 
 import { Toaster } from 'sonner'
 
@@ -21,7 +22,9 @@ function AppLayout() {
 
 function App() {
   return (
-    <div className="flex">
+    
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <div className="flex">      
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route path="home" element={<Home />}/>
@@ -33,6 +36,9 @@ function App() {
         </Routes>
       <Toaster />
     </div>
+  </ThemeProvider>
+ 
+    
   )
 }
 
