@@ -5,11 +5,19 @@ import { Card } from "@/components/ui/card"
 import { eachDayOfInterval, addDays, isSameDay } from "date-fns"
 import { useState } from "react"
 import type { url } from "inspector"
+import {NotebookPen} from "lucide-react"
 
 
 
 export function MenstruationCalendar() {
+  const url = "http://localhost:5173/date";
   const [date, setDate] = useState<Date | undefined>(new Date())
+  const formattedDate = date
+  ? new Intl.DateTimeFormat('en-US', {
+      month: 'long',
+      day: 'numeric',
+    }).format(date)
+  : ""
   const highlightDays = eachDayOfInterval({
     start: new Date(),
     end: addDays(new Date(), 5),
@@ -40,16 +48,17 @@ export function MenstruationCalendar() {
           />
       </Card>
       <span>{
-          date ? ` ${date.toLocaleDateString()}` : "Select a day to see details."
+          date ? ` ${formattedDate}` : "Select a day to see details."
         }
           <br />
-          previous period end 
+          previous period end: 
           <br />
-          next period start
+          next period start:
            <br />
       </span>
       <span>Make a note </span>
-      <a href="url">here.</a>
+      {/*TODO: Change the link to the date */}
+      <a href="http://localhost:5173/date">here.</a>
     </div>
     
   )
