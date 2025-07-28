@@ -4,6 +4,7 @@ import { Routes, Route, BrowserRouter, Outlet } from 'react-router-dom'
 import Home from './pages/Home'
 import Settings from './pages/Settings'
 import Note from './pages/Note'
+import DatePage from './pages/DatePage'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Sidebar from "@/components/ui/sidebar"
@@ -30,6 +31,7 @@ function App() {
             <Route path="home" element={<Home />}/>
             <Route path="settings" element={<Settings />}/>
             <Route path="note" element={<Note />}/>
+            <Route path="date/:dateString" element={<DatePage />}/>
           </Route>
           <Route path="/login" element={<Login />}/>
           <Route path="/signup" element={<Signup />}/>
