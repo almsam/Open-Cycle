@@ -3,15 +3,18 @@ import * as React from "react"
 import { Calendar } from "@/components/ui/calendar"
 import { Card } from "@/components/ui/card"
 import { Label } from "@radix-ui/react-label"
+import { Button } from "@/components/ui/button"
 import { eachDayOfInterval, addDays, isSameDay } from "date-fns"
 import { useState } from "react"
 import type { url } from "inspector"
 import {NotebookPen} from "lucide-react"
+import { useNavigate } from "react-router-dom";
 
 
 
 export function MenstruationCalendar() {
-  const url = "http://localhost:5173/date";
+  const navigate = useNavigate();
+  const url = "http://localhost:5173/note";
   const [date, setDate] = useState<Date | undefined>(new Date())
   const formattedDate = date
   ? new Intl.DateTimeFormat('en-US', {
@@ -58,7 +61,8 @@ export function MenstruationCalendar() {
       </div>
       </Card>
       </div>
-      <Card>
+      <Card className="border-[2px] border-[#a30262]">
+      <div>
       <span>{
           date ? ` ${formattedDate}` : "Select a day to see details."
         }
@@ -70,7 +74,10 @@ export function MenstruationCalendar() {
       </span>
       <span>Make a note </span>
       {/*TODO: Change the link to the date */}
-      <a href="http://localhost:5173/date">here.</a>
+      <button onClick={() => navigate('/note')}>
+        <NotebookPen className="mr-2 h-5 w-5" color="#33ccff" />
+      </button >
+      </div>
       </Card>
     </div>
     
