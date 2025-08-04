@@ -70,3 +70,9 @@ span:before {
 .note:before{
   background: #33ccff
 }
+
+.divider {
+    height: 5px;
+    background-color: #a30262;
+    margin: 40px 0;
+}
