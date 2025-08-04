@@ -61,6 +61,8 @@ export default function Settings() {
 
     return (
         <div className="w-full">
+            <h1 className="text-2xl font-bold text-[#a30262] mt-6 mb-2">Settings</h1>
+            <hr className="divider"/>
             <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Account</h1>
             
             <Form {...form}>
