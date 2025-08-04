@@ -50,7 +50,7 @@ export default function Note(){
 
     return (
     <div className="w-full">
-        <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">New Note</h1>
+        <h1 className="text-2xl font-bold text-[#a30262] mt-6 mb-2">New Note</h1>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" >
                     <div className="place-items-center">

@@ -3,6 +3,7 @@
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Switch } from "@/components/ui/switch"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
@@ -17,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import "../App.css"
+import type { AlignCenter } from "lucide-react"
 
 const FormSchema = z.object({
     name: z.string().min(2, {
@@ -51,9 +53,18 @@ export default function Settings() {
     toast("Your information has been updated.")
   }
 
+  function downloadData(){
+    toast("Coming soon")
+    //ready user data for export, inform user, start download
+  }
+
+
     return (
         <div className="w-full">
-            <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Settings</h1>
+            <h1 className="text-2xl font-bold text-[#a30262] mt-6 mb-2">Settings</h1>
+            <hr className="divider"/>
+            <h1 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Account</h1>
+            
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="place-items-center">
@@ -121,7 +132,19 @@ export default function Settings() {
                     </div>
                 </form>
             </Form>
+        <hr className="divider"/>
+        <div className="place-items-center">
+            <h2 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Privacy</h2>
+            <h1 className="text-accent-foreground mb-2">Use Cloud Storage (Coming Soon)</h1>
+            <Switch mt-6 mb-2/>
         </div>
+        <hr className="divider"/>
+        <div className="place-items-center">
+            <h2 className="text-xl font-bold text-[#a30262] mt-6 mb-2">Request Your Data</h2>
+            <Button onClick={downloadData}>Request Your Data (Coming Soon)</Button>
+    
+        </div>
+    </div>
         
 
     )
