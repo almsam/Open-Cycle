@@ -46,3 +46,27 @@
   justify-content: center;
   align-items: center;
 }
+
+#legend span {
+  display: block;
+  margin: 1px 3px 0px 0px;
+}
+span:before {
+  content:"";
+  display:inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.today:before{
+  background: #a30262;
+}
+.previous:before{
+  background: #d162a4
+}
+.next:before{
+  background:  #c61aff
+}
+.note:before{
+  background: #33ccff
+}
