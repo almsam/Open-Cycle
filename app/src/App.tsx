@@ -1,6 +1,6 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
-import { Routes, Route, BrowserRouter, Outlet } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
 import Home from './pages/Home'
 import Settings from './pages/Settings'
 import Note from './pages/Note'

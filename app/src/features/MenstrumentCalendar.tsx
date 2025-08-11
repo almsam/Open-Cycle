@@ -1,12 +1,12 @@
 "use client"
-import * as React from "react"
+//import * as React from "react"
 import { Calendar } from "@/components/ui/calendar"
 import { Card } from "@/components/ui/card"
-import { Label } from "@radix-ui/react-label"
-import { Button } from "@/components/ui/button"
-import { eachDayOfInterval, addDays, isSameDay } from "date-fns"
+//import { Label } from "@radix-ui/react-label"
+//import { Button } from "@/components/ui/button"
+import { eachDayOfInterval, addDays } from "date-fns"
 import { useState } from "react"
-import type { url } from "inspector"
+//import type { url } from "inspector"
 import {NotebookPen} from "lucide-react"
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 export function MenstruationCalendar() {
   const navigate = useNavigate();
-  const url = "http://localhost:5173/note";
+  //const url = "http://localhost:5173/note";
   const [date, setDate] = useState<Date | undefined>(new Date())
   const formattedDate = date
   ? new Intl.DateTimeFormat('en-US', {

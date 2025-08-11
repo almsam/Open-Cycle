@@ -1,6 +1,6 @@
 // components/ui/sidebar.tsx
 
-import { Home, NotebookPen, Settings, Moon } from "lucide-react"
+import { Home, NotebookPen, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useNavigate, useLocation } from "react-router-dom";
 import { ModeToggle } from "./mode-toggle";
