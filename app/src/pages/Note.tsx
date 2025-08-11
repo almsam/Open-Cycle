@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import "../App.css"
+import { getCycle, setCycle } from "@/localforage/cycleStorage"
 
 //from the zod docs
 const zodDateFromString = () =>
@@ -42,9 +43,9 @@ export default function Note(){
     });
     
     function onSubmit(data: z.infer<typeof formSchema>){
-        console.log("logged")
-        toast("Successfully logged!")
-        //TODO: implement calling backend here
+        setCycle(data);
+        
+        toast("Successfully logged!");
     }
     
 
