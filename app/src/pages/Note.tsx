@@ -41,7 +41,7 @@ export default function Note(){
         }
     });
     
-    function onSubmit(data: z.infer<typeof formSchema>){
+    function onSubmit(_data: z.infer<typeof formSchema>){
         console.log("logged")
         toast("Successfully logged!")
         //TODO: implement calling backend here
