@@ -7,7 +7,7 @@ const CycleSchema = new mongoose.Schema({
     required: true
   },
   // User provided information
-  menstruationStart: Date,
+  menstruationStart: {Date, required: true},
   menstruationEnd: Date,
   ovulationDate: Date,
   userNote: String,
