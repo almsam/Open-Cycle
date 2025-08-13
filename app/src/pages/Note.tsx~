@@ -42,10 +42,17 @@ export default function Note(){
         }
     });
     
+<<<<<<< HEAD
     function onSubmit(data: z.infer<typeof formSchema>){
         setCycle(data);
         
         toast("Successfully logged!");
+=======
+    function onSubmit(_data: z.infer<typeof formSchema>){
+        console.log("logged")
+        toast("Successfully logged!")
+        //TODO: implement calling backend here
+>>>>>>> main
     }
     
 

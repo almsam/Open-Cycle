@@ -1,6 +1,6 @@
 "use client"
 
-import { Label } from "@/components/ui/label"
+//import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
@@ -11,14 +11,14 @@ import { z } from "zod"
 import {
   Form,
   FormControl,
-  FormDescription,
+  //FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
 import "../App.css"
-import type { AlignCenter } from "lucide-react"
+//import type { AlignCenter } from "lucide-react"
 
 const FormSchema = z.object({
     name: z.string().min(2, {
@@ -48,7 +48,7 @@ export default function Settings() {
   })
 
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
+  function onSubmit(_data: z.infer<typeof FormSchema>) {
     console.log('hit')
     toast("Your information has been updated.")
   }
