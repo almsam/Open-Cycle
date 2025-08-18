@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import "../App.css"
-import { getCycle, setCycle } from "@/localforage/cycleStorage"
+import { setCycle } from "@/localforage/cycleStorage"
 
 //from the zod docs
 const zodDateFromString = () =>

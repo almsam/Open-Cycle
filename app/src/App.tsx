@@ -9,14 +9,28 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Sidebar from "@/components/ui/sidebar"
 import { ThemeProvider } from "@/components/ui/theme-provider"
-
+import { Capacitor } from "@capacitor/core";
 import { Toaster } from 'sonner'
 
 function AppLayout() {
+  const isAndroid = Capacitor.getPlatform() === "android";
   return (
-    <div className="flex">
-      <Sidebar />
-      <Outlet />
+    <div className={isAndroid ? "flex flex-col h-screen" : "flex"}>
+      {isAndroid ? (
+        <>
+          <div className="flex-1 overflow-auto">
+            <Outlet />
+          </div>
+          <Sidebar />
+        </>
+      ) : (
+        <>
+          <Sidebar />
+          <div className="flex-1 overflow-auto">
+            <Outlet />
+          </div>
+        </>
+      )}
     </div>
   );
 }

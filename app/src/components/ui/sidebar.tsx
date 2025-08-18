@@ -4,16 +4,21 @@ import { Home, NotebookPen, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useNavigate, useLocation } from "react-router-dom";
 import { ModeToggle } from "./mode-toggle";
+import { Capacitor } from "@capacitor/core";
 
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const isAndroid = Capacitor.getPlatform() === "android";
   const pathname = location.pathname;
   const isActive = (path: string) => pathname.includes(path);
 
   return (
-    <div className="w-[200px] h-screen border-r p-4 space-y-4">
+    <div className={`p-4 space-y-4 ${
+    isAndroid
+      ? "bottom-0 w-screen h-52 border-t" 
+      : "top-0 left-0 w-[200px] h-screen border-r" 
+  }`}>
       <h2 className="text-xl font-bold text-[#a30262]">Open Cycle</h2>
 
       <nav className="flex flex-col space-y-2">
