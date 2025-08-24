@@ -1,0 +1,24 @@
+# Dev Ops (2025 August 24th)
+
+## Current State
+<b>Integrating platforms</b> - As of now, the app is functional (just enough) to justify for a mobile platform development, but this is not recommended. Focus on developing on the desktop version where there is much more support, tools and insight bugfixing than to juggle 2 platforms at the same time, THEN wrap the app with a platform tool after the desktop version is well-developed
+
+<b>Integrating Database</b> - So far is looking on the right track - but felt like PRs are  disconnected and slightly derivating from each other. One person should integrate the DB, design the schema then posts, integrate and have the secret key (API) posted and instructed for any devs who are working on the DB communication to be informed, less time-sink and seemless integration.
+
+<b>Test Cases</b> - Since we are integrating a new platform, it is essential that we adopt a test-driven mindset. Recommended Vitest to be our dedicated testing library.
+
+<b>Repository bookkeeping</b> - A lot is needed to do for the repo - lots of cleaning up, refactoring, CI/CDs, kanban populating and .md updating + editing (see below)
+
+## Issues to solve (not ordered by priority)
+
+- Method coverage for localForage and MongoDB, including: getters, setters based on a key of the database (might be their unique ID or email, security will come later)
+- Finishing up draft and placeholders pages for the web flowchart (shoutout to having a flowchart) and connecting them with barebone buttons that navigate between them, and
+- Finishing up the functionality for each of those pages and components
+- Integrating the repo to hold secret keys
+- Integrating the repo to run test cases whenever someone pushes a PR
+- Populate the Kanban to holds our requirements and techs
+- Cleanup of various .md, folder structure, naming conventions
+- Delegate the methods of a certain tech to a whole library of itself (for example, DB with their own methods library and APIs, DBtest with their testcases, localForage with their own methods and library and API, localForagetest with their testcases, etc)
+- Populate issues with more descriptive, linkages and assigning to people properly (bookkeeping)
+
+#### Work by pieces, integrate them, and if you are responsible for a certain page, create test cases for them - of course you cant test aesthetic components, but you can definitely create a PR with screenshots and before/after so that everyone is informed. Anything that falls under functionality wise are 100% testable.
