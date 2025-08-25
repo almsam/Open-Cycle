@@ -7,10 +7,15 @@ import { Card } from "@/components/ui/card";
 import { eachDayOfInterval, addDays } from "date-fns";
 import { useState } from "react";
 //import type { url } from "inspector"
-import { NotebookPen } from "lucide-react";
+import { CircleQuestionMark, NotebookPen } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Capacitor } from "@capacitor/core";
 import { Legend } from "@/components/custom/legend";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export function MenstruationCalendar() {
   const isAndroid = Capacitor.getPlatform() === "android";
@@ -32,9 +37,23 @@ export function MenstruationCalendar() {
     <div>
       <div className="flex h-screen">
         <div className="flex flex-col flex-1 items-center justify-start p-8 space-y-8">
-          <h1 className="text-2xl font-semibold text-center">
-            Open Cycle Calendar
-          </h1>
+          <div className="flex flex-row justify-between w-full">
+            <h1 className="text-2xl font-semibold text-center">
+              Open Cycle Calendar
+            </h1>
+            {isAndroid ? (
+              <Popover>
+                <PopoverTrigger>
+                  <CircleQuestionMark></CircleQuestionMark>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <Legend className="border-[2px] border-[#00bfff]"></Legend>
+                </PopoverContent>
+              </Popover>
+            ) : (
+              ""
+            )}
+          </div>
           <div className={isAndroid ? "flex flex-col" : "flex items-start"}>
             <Card
               className={`border-[2px] border-[#a30262] w-full ${
