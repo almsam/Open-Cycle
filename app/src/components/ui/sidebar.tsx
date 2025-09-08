@@ -26,6 +26,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { toast } from "sonner";
 
 export default function Sidebar() {
   const navigate = useNavigate();
@@ -33,6 +34,16 @@ export default function Sidebar() {
   const isAndroid = Capacitor.getPlatform() === "android";
   const pathname = location.pathname;
   const isActive = (path: string) => pathname.includes(path);
+
+  function deleteAccount() {
+    toast("Your account has been deleted successfully.");
+    navigate("login");
+  }
+
+  function signout() {
+    toast("you have been successfully logged out.");
+    navigate("login");
+  }
 
   return (
     <div
@@ -78,7 +89,9 @@ export default function Sidebar() {
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction>Sign Out</AlertDialogAction>
+                    <AlertDialogAction onClick={() => signout()}>
+                      Sign Out
+                    </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
@@ -100,7 +113,9 @@ export default function Sidebar() {
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <AlertDialogCancel>Cancel</AlertDialogCancel>
-                    <AlertDialogAction>Delete account</AlertDialogAction>
+                    <AlertDialogAction onClick={() => deleteAccount()}>
+                      Delete account
+                    </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
