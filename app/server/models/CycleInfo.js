@@ -7,14 +7,14 @@ const CycleSchema = new mongoose.Schema({
     required: true
   },
   // User provided information
-  menstruationStart: {Date, required: true},
-  menstruationEnd: Date,
-  ovulationDate: Date,
-  userNote: String,
+  menstruationStart: {type: Date, required: true},
+  menstruationEnd: {type: Date},
+  ovulationDate: {type: Date},
+  userNote: {type: String},
   // App provided information
-  fertileWindowStart: Date,
-  fertileWindowEnd: Date,
-  averageCycleLength: Number // Average in days, across last 6 months
+  fertileWindowStart: {type: Date},
+  fertileWindowEnd: {type: Date},
+  averageCycleLength: {type: Number} // Average in days, across last 6 months
 });
 
 // Methods
